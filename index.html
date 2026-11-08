@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RIVIERA DISTRICT — пространство для жизни у воды</title>
+<meta name="description" content="Вымышленный элитный жилой район на побережье. Демонстрационный проект.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="image" href="images/hero.jpg">
+</head>
+<body>
+<header id="nav">
+  <a class="logo" href="#top">RIVIERA <b>DISTRICT</b></a>
+  <button class="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+  <nav><a href="#about">District</a><a href="#architecture">Architecture</a><a href="#residences">Residences</a><a href="#interiors">Interiors</a><a href="#masterplan">Masterplan</a><a href="#lifestyle">Lifestyle</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-in">
+    <p class="brand">RIVIERA DISTRICT</p>
+    <h1 id="h1">Пространство для жизни у воды</h1>
+    <p class="lead">Кварталы из светлого камня, сады, спускающиеся к морю, и набережная, где город заканчивается медленно. Вымышленный район — демонстрационный проект.</p>
+    <a class="btn" href="#about">Explore</a><a class="btn solid" href="#residences">Discover Residences</a>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <div class="wrap two">
+    <div class="rv">
+      <h2>Город, который выходит к морю</h2>
+      <p>По сюжету проекта Riviera District вырос на месте старой портовой бухты. Склады убрали, причалы превратили в променад, а вдоль воды разбили сады. Дома стоят невысоко и не закрывают друг другу горизонт.</p>
+      <p>Каждый квартал устроен как тихий двор с выходом к парку, а центральная улица ведёт прямо к набережной.</p>
+    </div>
+    <ul class="facts rv">
+      <li><b>Свет вместо стекла</b>Фасады из известняка и светлого бетона меняют цвет в течение дня.</li>
+      <li><b>Ни одной парковки на поверхности</b>Все машины уходят под землю, дворы остаются пешеходными.</li>
+      <li><b>Маяк-флюгер</b>Белая башня на оконечности мола показывает направление ветра.</li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <figure class="band rv"><img src="images/district-aerial.jpg" alt="Район с высоты: кварталы, набережная и марина" loading="lazy" decoding="async"><figcaption>Район с высоты. Визуализация вымышленного проекта.</figcaption></figure>
+    <div class="stats">
+      <div class="stat rv"><b data-n="48" data-u=" га">0</b><span>площадь территории</span></div>
+      <div class="stat rv"><b data-n="12">0</b><span>жилых кварталов</span></div>
+      <div class="stat rv"><b data-n="3.2" data-d="1" data-u=" км">0</b><span>протяжённость набережной</span></div>
+      <div class="stat rv"><b data-n="7">0</b><span>парков и садов</span></div>
+    </div>
+    <p class="note">Все цифры — характеристики вымышленного проекта, а не реальные данные.</p>
+  </div>
+</section>
+
+<section id="architecture" class="sec alt">
+  <div class="wrap">
+    <h2 class="rv">Architecture</h2>
+    <p class="lead rv">Восемь зданий района. Выберите тип и откройте проект: фасады, материалы и резиденции внутри.</p>
+    <div class="chips" id="archFilters"></div>
+    <div class="grid" id="archGrid"></div>
+  </div>
+</section>
+
+<section id="residences" class="sec">
+  <div class="wrap">
+    <h2 class="rv">Residences</h2>
+    <p class="lead rv">Откройте резиденцию: галерея, планировка, характеристики и цена.</p>
+    <div class="bar">
+      <label>Тип<select id="fType"><option value="">Все</option></select></label>
+      <label>Комнаты<select id="fRooms"><option value="">Любое</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4 и больше</option></select></label>
+      <label>Площадь<select id="fArea"><option value="0-999">Любая</option><option value="0-70">до 70 м²</option><option value="70-120">70–120 м²</option><option value="120-999">от 120 м²</option></select></label>
+      <label>Цена<select id="fPrice"><option value="0-99999999">Любая</option><option value="0-500000">до € 500 000</option><option value="500000-1000000">€ 500 000 – 1 млн</option><option value="1000000-99999999">от € 1 млн</option></select></label>
+      <label>Сортировка<select id="fSort"><option value="id:asc">По умолчанию</option><option value="price:asc">Цена: по возрастанию</option><option value="price:desc">Цена: по убыванию</option><option value="area:desc">Площадь: сначала большие</option><option value="area:asc">Площадь: сначала малые</option></select></label>
+      <button class="link" id="fReset" type="button">Сбросить</button>
+    </div>
+    <p class="note" id="estCount"></p>
+    <div class="grid" id="estGrid"></div>
+    <p class="note">Цены и характеристики демонстрационные.</p>
+  </div>
+</section>
+
+<section id="interiors" class="sec alt">
+  <div class="wrap">
+    <h2 class="rv">Interiors</h2>
+    <p class="lead rv">Свет, камень и тёплое дерево. Нажмите на фотографию, чтобы открыть её крупно и листать подборку.</p>
+    <div class="chips" id="intFilters"></div>
+    <div class="mosaic" id="intGrid"></div>
+  </div>
+</section>
+
+<section id="masterplan" class="sec">
+  <div class="wrap">
+    <h2 class="rv">Masterplan</h2>
+    <p class="lead rv">Нажмите на точку на карте или выберите объект из списка.</p>
+    <div class="map-wrap rv">
+      <div>
+        <svg id="map" viewBox="0 0 800 520" role="img" aria-label="Схема района Riviera District">
+          <rect width="800" height="520" fill="#cfe0e3"/>
+          <path d="M0 0H570C610 110 530 220 585 320S560 470 525 520H0Z" fill="#efe7d6"/>
+          <path d="M0 200H560M300 0V520M0 340H540" stroke="#fff" stroke-width="7" opacity=".85" fill="none"/>
+          <ellipse cx="235" cy="265" rx="125" ry="82" fill="#b9c9a3"/>
+          <path d="M150 265C200 220 270 310 320 262" stroke="#fff" stroke-width="5" fill="none"/>
+          <g fill="#fbf8f2" stroke="#d8c7a6">
+            <rect x="70" y="80" width="50" height="36"/><rect x="130" y="80" width="60" height="36"/><rect x="70" y="130" width="50" height="50"/><rect x="130" y="130" width="60" height="50"/><rect x="200" y="90" width="44" height="70"/>
+            <rect x="400" y="100" width="24" height="24"/><rect x="436" y="100" width="24" height="24"/><rect x="418" y="136" width="24" height="24"/>
+            <rect x="350" y="360" width="110" height="60"/>
+          </g>
+          <rect x="70" y="372" width="110" height="64" rx="30" fill="#e6d8bc"/><rect x="88" y="386" width="74" height="36" rx="18" fill="#b9c9a3"/>
+          <path d="M570 0C610 110 530 220 585 320S560 470 525 520" fill="none" stroke="#fff" stroke-width="16"/>
+          <rect x="556" y="428" width="76" height="8" fill="#fbf8f2" stroke="#d8c7a6"/><g fill="#fff"><rect x="568" y="440" width="7" height="16" rx="3.5"/><rect x="588" y="440" width="7" height="16" rx="3.5"/><rect x="608" y="440" width="7" height="16" rx="3.5"/><rect x="578" y="406" width="7" height="16" rx="3.5"/><rect x="598" y="406" width="7" height="16" rx="3.5"/></g>
+          <g id="markers"></g>
+        </svg>
+        <div class="chips" id="mapChips"></div>
+      </div>
+      <aside id="mapCard" aria-live="polite"></aside>
+    </div>
+  </div>
+</section>
+
+<section id="lifestyle" class="sec alt">
+  <div class="wrap">
+    <h2 class="rv">Lifestyle</h2>
+    <p class="lead rv">Рестораны, спорт, набережная, парки, галерея и марина — всё в десяти минутах пешком. Нажмите на карточку, чтобы раскрыть список.</p>
+    <div class="grid" id="lifeGrid"></div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="wrap cgrid">
+  <div class="form-box rv">
+    <h2>Contact</h2>
+    <p class="lead">Расскажите, что вы ищете, — и мы подготовим подборку. Форма демонстрационная: данные никуда не отправляются.</p>
+    <form id="form" novalidate>
+      <div class="f"><label for="fn">Имя</label><input id="fn" autocomplete="name"><span class="err"></span></div>
+      <div class="f"><label for="fc">Телефон или email</label><input id="fc" autocomplete="email"><span class="err"></span></div>
+      <div class="f"><label for="ft">Тип недвижимости</label><select id="ft"><option value="">Выберите тип</option></select><span class="err"></span></div>
+      <button class="btn dark" type="submit">Отправить заявку</button>
+    </form>
+    <div id="ok" hidden>
+      <h3>Спасибо, <span id="okName"></span>!</h3>
+      <p class="lead">Это демонстрационная отправка: заявка не ушла на сервер и нигде не сохранена.</p>
+      <button class="btn dark" id="again" type="button" style="margin-top:20px">Заполнить заново</button>
+    </div>
+  </div>
+  <figure class="side rv"><img src="images/sunset.jpg" alt="Закат над мариной Riviera District" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Riviera District — вымышленный проект. Все объекты, цены и цифры придуманы.</div></footer>
+
+<div class="modal" id="modal" hidden><div class="m-box" role="dialog" aria-modal="true"><button class="m-x" aria-label="Закрыть">×</button><div id="mBody"></div></div></div>
+
+<div id="page" hidden><div class="pg-bar"><button class="back" id="back" type="button">← Назад</button><span id="pgTitle"></span></div><div id="pgBody"></div></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
